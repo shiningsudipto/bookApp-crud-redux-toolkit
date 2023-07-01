@@ -21,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: 'allbooks',
         element: <AllBooks />
+      },
+      {
+        path: 'editbook',
+        element: <EditBook />
       }
     ]
   },
@@ -36,6 +40,7 @@ import AllBooks from './features/book/AllBooks.jsx';
 import Error from './Pages/Error.jsx';
 import { Provider } from 'react-redux';
 import store from './app/store.js';
+import EditBook from './features/book/EditBook.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
