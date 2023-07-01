@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
+import { updateBook } from "./bookSlice";
 
 const EditBook = () => {
     const navigate = useNavigate();
@@ -22,7 +23,7 @@ const EditBook = () => {
         console.log(bookInfo);
         dispatch(updateBook({ id, title, author }));
         form.reset();
-        navigate("/show-books", { replace: true });
+        navigate("/allbooks", { replace: true });
     }
     return (
         <div>
