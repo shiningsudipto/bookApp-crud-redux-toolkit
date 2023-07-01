@@ -18,3 +18,11 @@ margin: 5px;
   text-decoration: none;
   font-weight: 700;
 }
+
+table{
+border-color: aqua;
+background-color: aqua;
+}
+.theader{
+  padding: 10px 80px;
+}
