@@ -1,7 +1,9 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { addBook } from "./bookSlice";
 
 const AddBook = () => {
     const booksLength = useSelector((state) => state.booksReducer.books.length)
+    const dispatch = useDispatch();
     const handleBook = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -13,6 +15,8 @@ const AddBook = () => {
             author
         }
         console.log(bookInfo);
+        dispatch(addBook(bookInfo))
+        form.reset();
     }
     return (
         <div>
